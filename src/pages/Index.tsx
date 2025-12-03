@@ -114,53 +114,6 @@ export default function Index() {
                 </div>
               </div>
             </section>
-
-            <section>
-              <h3 className="text-3xl font-bold mb-8">Последние публикации</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {articles.map((article, index) => (
-                  <Card 
-                    key={article.id} 
-                    className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border-2 hover:border-primary/50"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <img 
-                        src={article.image} 
-                        alt={article.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <Badge 
-                          variant="secondary" 
-                          className="bg-background/90 backdrop-blur-sm"
-                        >
-                          {article.category}
-                        </Badge>
-                      </div>
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                        {article.title}
-                      </CardTitle>
-                      <CardDescription className="text-base">
-                        {article.excerpt}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardFooter className="flex justify-between items-center text-sm text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Icon name="Calendar" size={16} />
-                        <span>{article.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="Clock" size={16} />
-                        <span>{article.readTime}</span>
-                      </div>
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
-            </section>
           </div>
         )}
 
