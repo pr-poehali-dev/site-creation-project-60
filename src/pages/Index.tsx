@@ -269,8 +269,25 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col items-center justify-center py-20">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6">
-                <Icon name="FileText" size={64} className="text-primary" />
+              <div className="flex gap-4 mb-8">
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl">
+                  🤑
+                </div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl">
+                  🤑
+                </div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl">
+                  🤑
+                </div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl">
+                  🤫
+                </div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl">
+                  🤓
+                </div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl">
+                  😎
+                </div>
               </div>
               <h3 className="text-2xl font-semibold mb-3">Пока нет публикаций</h3>
               <p className="text-muted-foreground text-center max-w-md mb-8">
