@@ -280,6 +280,9 @@ export default function Index() {
                 <Icon name="Plus" size={20} className="mr-2" />
                 Создать первую публикацию
               </Button>
+              <p className="text-sm text-muted-foreground mt-8">
+                by: in buzanBazzed
+              </p>
             </div>
           </div>
         )}
