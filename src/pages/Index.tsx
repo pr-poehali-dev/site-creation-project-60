@@ -97,10 +97,16 @@ export default function Index() {
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
                   Публикую интересные статьи о дизайне, технологиях и креативе
                 </p>
-                <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-                  <Icon name="Sparkles" size={20} className="mr-2" />
-                  Начать читать
-                </Button>
+                <div className="flex gap-4 justify-center">
+                  <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+                    <Icon name="Sparkles" size={20} className="mr-2" />
+                    Начать читать
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-2">
+                    <Icon name="Send" size={20} className="mr-2" />
+                    Мой Телеграм
+                  </Button>
+                </div>
               </div>
             </section>
 
