@@ -45,7 +45,7 @@ const articles: Article[] = [
 ];
 
 export default function Index() {
-  const [activeSection, setActiveSection] = useState<'home' | 'about' | 'author'>('home');
+  const [activeSection, setActiveSection] = useState<'home' | 'about' | 'author' | 'publications'>('home');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
@@ -71,6 +71,14 @@ export default function Index() {
               >
                 <Icon name="BookOpen" size={18} className="mr-2" />
                 О блоге
+              </Button>
+              <Button
+                variant={activeSection === 'publications' ? 'default' : 'ghost'}
+                onClick={() => setActiveSection('publications')}
+                className="transition-all duration-300"
+              >
+                <Icon name="FileText" size={18} className="mr-2" />
+                Публикации
               </Button>
               <Button
                 variant={activeSection === 'author' ? 'default' : 'ghost'}
@@ -248,6 +256,31 @@ export default function Index() {
                 </div>
               </div>
             </Card>
+          </div>
+        )}
+
+        {activeSection === 'publications' && (
+          <div className="animate-fade-in max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Публикации</h2>
+              <p className="text-lg text-muted-foreground">
+                Здесь будут появляться новые статьи и материалы
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center justify-center py-20">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6">
+                <Icon name="FileText" size={64} className="text-primary" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-3">Пока нет публикаций</h3>
+              <p className="text-muted-foreground text-center max-w-md mb-8">
+                Скоро здесь появятся интересные материалы о дизайне, технологиях и креативе
+              </p>
+              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary">
+                <Icon name="Plus" size={20} className="mr-2" />
+                Создать первую публикацию
+              </Button>
+            </div>
           </div>
         )}
       </main>
