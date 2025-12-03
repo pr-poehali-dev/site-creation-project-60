@@ -102,7 +102,12 @@ export default function Index() {
                     <Icon name="Sparkles" size={20} className="mr-2" />
                     Начать читать
                   </Button>
-                  <Button size="lg" variant="outline" className="border-2">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-2"
+                    onClick={() => window.open('https://t.me/olnybuzan', '_blank')}
+                  >
                     <Icon name="Send" size={20} className="mr-2" />
                     Мой Телеграм
                   </Button>
